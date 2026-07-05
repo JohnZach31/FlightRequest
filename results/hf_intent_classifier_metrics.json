@@ -1,0 +1,98 @@
+{
+  "model": "fine_tuned_distilbert_intent_classifier",
+  "base_model": "distilbert-base-uncased",
+  "task": "intent_classification_only",
+  "total_examples": 150,
+  "accuracy": 1.0,
+  "labels": [
+    "baggage_question",
+    "book_flight",
+    "cancel_flight",
+    "change_flight",
+    "search_flight"
+  ],
+  "classification_report": {
+    "baggage_question": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 15.0
+    },
+    "book_flight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 37.0
+    },
+    "cancel_flight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 19.0
+    },
+    "change_flight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 18.0
+    },
+    "search_flight": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 61.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 150.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 150.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      15,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      37,
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      19,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      18,
+      0
+    ],
+    [
+      0,
+      0,
+      0,
+      0,
+      61
+    ]
+  ],
+  "number_of_mistakes": 0,
+  "mistakes": []
+}

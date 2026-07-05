@@ -18,6 +18,15 @@
     "full_example_accuracy": ""
   },
   {
+    "method": "fine_tuned_distilbert",
+    "task": "intent_classification_only",
+    "total_examples": 150,
+    "intent_accuracy": 1.0,
+    "slot_accuracy": "",
+    "missing_fields_accuracy": "",
+    "full_example_accuracy": ""
+  },
+  {
     "method": "one_classifier_per_slot",
     "task": "slot_classification_only",
     "total_examples": 150,

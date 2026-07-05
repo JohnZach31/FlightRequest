@@ -11,6 +11,7 @@ INTENT_METRICS_PATH = PROJECT_ROOT / "results" / "intent_classifier_metrics.json
 SLOT_METRICS_PATH = PROJECT_ROOT / "results" / "slot_classifier_metrics.json"
 ML_PIPELINE_METRICS_PATH = PROJECT_ROOT / "results" / "ml_pipeline_metrics.json"
 LLM_MANUAL_METRICS_PATH = PROJECT_ROOT / "results" / "llm_manual_20_metrics.json"
+HF_INTENT_METRICS_PATH = PROJECT_ROOT / "results" / "hf_intent_classifier_metrics.json"
 
 CSV_OUTPUT_PATH = PROJECT_ROOT / "results" / "model_comparison.csv"
 JSON_OUTPUT_PATH = PROJECT_ROOT / "results" / "model_comparison.json"
@@ -27,6 +28,7 @@ def main():
     slot_data = load_json(SLOT_METRICS_PATH)
     ml_pipeline_data = load_json(ML_PIPELINE_METRICS_PATH)
     llm_manual_data = load_json(LLM_MANUAL_METRICS_PATH)
+    hf_intent_data = load_json(HF_INTENT_METRICS_PATH)
 
     rule_metrics = rule_data["metrics"]
     ml_metrics = ml_pipeline_data["metrics"]
@@ -50,6 +52,15 @@ def main():
             "task": "intent_classification_only",
             "total_examples": test_total,
             "intent_accuracy": intent_data["accuracy"],
+            "slot_accuracy": "",
+            "missing_fields_accuracy": "",
+            "full_example_accuracy": "",
+        },
+        {
+            "method": "fine_tuned_distilbert",
+            "task": "intent_classification_only",
+            "total_examples": hf_intent_data["total_examples"],
+            "intent_accuracy": hf_intent_data["accuracy"],
             "slot_accuracy": "",
             "missing_fields_accuracy": "",
             "full_example_accuracy": "",
