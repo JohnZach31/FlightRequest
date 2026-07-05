@@ -233,17 +233,35 @@ This gives a full structured output, but the task is much harder than intent cla
 
 ---
 
+### 5. Fine-tuned DistilBERT intent classifier
+
+I also fine-tuned `distilbert-base-uncased` using Hugging Face Transformers for the intent classification task.
+
+This model uses the same train / validation / test split as the classical ML models.  
+It predicts one of the five intent labels:
+
+- `search_flight`
+- `book_flight`
+- `change_flight`
+- `cancel_flight`
+- `baggage_question`
+
+The fine-tuned DistilBERT model reached 1.000 accuracy on the 150-example test set.
+
+---
+
 ## Results
 
 | Method | Task | Examples | Intent Accuracy | Slot Accuracy | Missing Field Accuracy | Full Example Accuracy |
 |---|---|---:|---:|---:|---:|---:|
 | Rule-based baseline | Full schema extraction | 150 | 0.840 | 0.862 | 0.307 | 0.220 |
 | TF-IDF Logistic Regression | Intent classification only | 150 | 0.993 | - | - | - |
+| Fine-tuned DistilBERT | Intent classification only | 150 | 1.000 | - | - | - |
 | One classifier per slot | Slot classification only | 150 | - | 0.844 | - | - |
 | TF-IDF intent + slot classifiers | Full schema extraction | 150 | 0.993 | 0.844 | 0.347 | 0.247 |
 | Manual off-the-shelf LLM | Full schema extraction sample | 20 | 1.000 | 0.992 | 1.000 | 0.900 |
 
-Note: the manual off-the-shelf LLM baseline was evaluated on a smaller 20-example sample, while the rule-based and classical ML methods were evaluated on the full 150-example test set.
+Note: the manual off-the-shelf LLM baseline was evaluated on a smaller 20-example sample, while the rule-based, classical ML, and fine-tuned DistilBERT models were evaluated on the 150-example test set.
 ---
 
 ## Main observations
