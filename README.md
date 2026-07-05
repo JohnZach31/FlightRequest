@@ -1,4 +1,4 @@
-# FlightNLP – Natural Language Flight Request Parser
+# FlightRequest – Natural Language Flight Request Parser
 
 ## Project overview
 
