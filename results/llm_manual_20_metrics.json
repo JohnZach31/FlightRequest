@@ -1,0 +1,87 @@
+{
+  "metrics": {
+    "model": "manual_off_the_shelf_llm_20_examples",
+    "total_examples": 20,
+    "intent_accuracy": 1.0,
+    "slot_accuracy": 0.9923076923076923,
+    "missing_fields_accuracy": 1.0,
+    "full_example_accuracy": 0.9,
+    "number_of_mistakes": 2
+  },
+  "mistakes": [
+    {
+      "id": 1,
+      "gold_intent": "baggage_question",
+      "predicted_intent": "baggage_question",
+      "gold_missing_fields": [],
+      "predicted_missing_fields": [],
+      "gold_slots": {
+        "origin": null,
+        "destination": null,
+        "departure_date": null,
+        "return_date": null,
+        "trip_type": null,
+        "passengers": null,
+        "cabin_class": null,
+        "budget": null,
+        "layover_preference": null,
+        "time_preference": null,
+        "baggage": null,
+        "airline_preference": null,
+        "booking_reference": null
+      },
+      "predicted_slots": {
+        "origin": null,
+        "destination": null,
+        "departure_date": null,
+        "return_date": null,
+        "trip_type": null,
+        "passengers": null,
+        "cabin_class": null,
+        "budget": null,
+        "layover_preference": null,
+        "time_preference": null,
+        "baggage": "checked bag",
+        "airline_preference": null,
+        "booking_reference": null
+      }
+    },
+    {
+      "id": 12,
+      "gold_intent": "baggage_question",
+      "predicted_intent": "baggage_question",
+      "gold_missing_fields": [],
+      "predicted_missing_fields": [],
+      "gold_slots": {
+        "origin": null,
+        "destination": null,
+        "departure_date": null,
+        "return_date": null,
+        "trip_type": null,
+        "passengers": null,
+        "cabin_class": null,
+        "budget": null,
+        "layover_preference": null,
+        "time_preference": null,
+        "baggage": "two checked bags",
+        "airline_preference": "Lufthansa",
+        "booking_reference": null
+      },
+      "predicted_slots": {
+        "origin": null,
+        "destination": null,
+        "departure_date": null,
+        "return_date": null,
+        "trip_type": null,
+        "passengers": null,
+        "cabin_class": null,
+        "budget": null,
+        "layover_preference": null,
+        "time_preference": null,
+        "baggage": null,
+        "airline_preference": "Lufthansa",
+        "booking_reference": null
+      }
+    }
+  ]
+}

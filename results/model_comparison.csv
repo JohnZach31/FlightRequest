@@ -1,0 +1,6 @@
+method,task,total_examples,intent_accuracy,slot_accuracy,missing_fields_accuracy,full_example_accuracy
+rule_based_baseline,full_schema_extraction,150,0.84,0.862051282051282,0.30666666666666664,0.22
+tfidf_logistic_regression,intent_classification_only,150,0.9933333333333333,,,
+one_classifier_per_slot,slot_classification_only,150,,0.844102564102564,,
+tfidf_intent_plus_slot_classifiers,full_schema_extraction,150,0.9933333333333333,0.8441025641025641,0.3466666666666667,0.24666666666666667
+manual_off_the_shelf_llm,full_schema_extraction_20_example_sample,20,1.0,0.9923076923076923,1.0,0.9

@@ -1,0 +1,47 @@
+[
+  {
+    "method": "rule_based_baseline",
+    "task": "full_schema_extraction",
+    "total_examples": 150,
+    "intent_accuracy": 0.84,
+    "slot_accuracy": 0.862051282051282,
+    "missing_fields_accuracy": 0.30666666666666664,
+    "full_example_accuracy": 0.22
+  },
+  {
+    "method": "tfidf_logistic_regression",
+    "task": "intent_classification_only",
+    "total_examples": 150,
+    "intent_accuracy": 0.9933333333333333,
+    "slot_accuracy": "",
+    "missing_fields_accuracy": "",
+    "full_example_accuracy": ""
+  },
+  {
+    "method": "one_classifier_per_slot",
+    "task": "slot_classification_only",
+    "total_examples": 150,
+    "intent_accuracy": "",
+    "slot_accuracy": 0.844102564102564,
+    "missing_fields_accuracy": "",
+    "full_example_accuracy": ""
+  },
+  {
+    "method": "tfidf_intent_plus_slot_classifiers",
+    "task": "full_schema_extraction",
+    "total_examples": 150,
+    "intent_accuracy": 0.9933333333333333,
+    "slot_accuracy": 0.8441025641025641,
+    "missing_fields_accuracy": 0.3466666666666667,
+    "full_example_accuracy": 0.24666666666666667
+  },
+  {
+    "method": "manual_off_the_shelf_llm",
+    "task": "full_schema_extraction_20_example_sample",
+    "total_examples": 20,
+    "intent_accuracy": 1.0,
+    "slot_accuracy": 0.9923076923076923,
+    "missing_fields_accuracy": 1.0,
+    "full_example_accuracy": 0.9
+  }
+]

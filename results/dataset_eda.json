@@ -1,0 +1,35 @@
+{
+  "total_examples": 1000,
+  "intent_distribution": {
+    "search_flight": 379,
+    "baggage_question": 133,
+    "cancel_flight": 127,
+    "book_flight": 245,
+    "change_flight": 116
+  },
+  "missing_field_distribution": {
+    "departure_date": 149,
+    "trip_type": 207,
+    "booking_reference": 77,
+    "passengers": 199,
+    "destination": 84,
+    "origin": 96
+  },
+  "filled_slot_distribution": {
+    "origin": 528,
+    "destination": 540,
+    "departure_date": 475,
+    "trip_type": 417,
+    "passengers": 425,
+    "cabin_class": 172,
+    "budget": 285,
+    "time_preference": 226,
+    "baggage": 88,
+    "booking_reference": 166,
+    "layover_preference": 229,
+    "airline_preference": 80
+  },
+  "average_text_length_words": 13.339,
+  "min_text_length_words": 3,
+  "max_text_length_words": 31
+}

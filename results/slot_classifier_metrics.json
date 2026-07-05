@@ -1,0 +1,855 @@
+{
+  "model": "one_classifier_per_slot_tfidf_logistic_regression",
+  "overall_average_slot_accuracy": 0.844102564102564,
+  "slot_metrics": {
+    "origin": {
+      "accuracy": 0.6266666666666667,
+      "label_counts_train": {
+        "Tokyo": 25,
+        "__NONE__": 328,
+        "Prague": 27,
+        "Budapest": 29,
+        "Paris": 31,
+        "Tel Aviv": 31,
+        "Rome": 28,
+        "Barcelona": 27,
+        "Berlin": 23,
+        "Amsterdam": 27,
+        "New York": 26,
+        "Athens": 24,
+        "Vienna": 19,
+        "Madrid": 29,
+        "London": 26
+      },
+      "classification_report": {
+        "Amsterdam": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 4.0
+        },
+        "Athens": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 10.0
+        },
+        "Barcelona": {
+          "precision": 1.0,
+          "recall": 0.42857142857142855,
+          "f1-score": 0.6,
+          "support": 7.0
+        },
+        "Berlin": {
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "f1-score": 0.4444444444444444,
+          "support": 7.0
+        },
+        "Budapest": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.8,
+          "support": 3.0
+        },
+        "London": {
+          "precision": 1.0,
+          "recall": 0.375,
+          "f1-score": 0.5454545454545454,
+          "support": 8.0
+        },
+        "Madrid": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 4.0
+        },
+        "New York": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1-score": 0.8571428571428571,
+          "support": 4.0
+        },
+        "Paris": {
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "f1-score": 0.4444444444444444,
+          "support": 7.0
+        },
+        "Prague": {
+          "precision": 1.0,
+          "recall": 0.15384615384615385,
+          "f1-score": 0.26666666666666666,
+          "support": 13.0
+        },
+        "Rome": {
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1-score": 0.2857142857142857,
+          "support": 6.0
+        },
+        "Tel Aviv": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 2.0
+        },
+        "Tokyo": {
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.5,
+          "support": 6.0
+        },
+        "Vienna": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "__NONE__": {
+          "precision": 0.5462184873949579,
+          "recall": 1.0,
+          "f1-score": 0.7065217391304348,
+          "support": 65.0
+        },
+        "accuracy": 0.6266666666666667,
+        "macro avg": {
+          "precision": 0.8141923436041083,
+          "recall": 0.4297008547008546,
+          "f1-score": 0.5055814877554007,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.7455835667600373,
+          "recall": 0.6266666666666667,
+          "f1-score": 0.57101752514796,
+          "support": 150.0
+        }
+      }
+    },
+    "destination": {
+      "accuracy": 0.5733333333333334,
+      "label_counts_train": {
+        "Berlin": 30,
+        "Athens": 36,
+        "Paris": 34,
+        "__NONE__": 319,
+        "Tel Aviv": 23,
+        "New York": 28,
+        "Budapest": 32,
+        "Barcelona": 22,
+        "Vienna": 28,
+        "Tokyo": 30,
+        "Amsterdam": 25,
+        "Rome": 25,
+        "Madrid": 22,
+        "Prague": 24,
+        "London": 22
+      },
+      "classification_report": {
+        "Amsterdam": {
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "f1-score": 0.4444444444444444,
+          "support": 7.0
+        },
+        "Athens": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1-score": 0.8571428571428571,
+          "support": 8.0
+        },
+        "Barcelona": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "Berlin": {
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1-score": 0.3333333333333333,
+          "support": 4.0
+        },
+        "Budapest": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "London": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "Madrid": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 9.0
+        },
+        "New York": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 6.0
+        },
+        "Paris": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1-score": 0.5714285714285714,
+          "support": 4.0
+        },
+        "Prague": {
+          "precision": 1.0,
+          "recall": 0.1111111111111111,
+          "f1-score": 0.2,
+          "support": 9.0
+        },
+        "Rome": {
+          "precision": 1.0,
+          "recall": 0.2,
+          "f1-score": 0.3333333333333333,
+          "support": 10.0
+        },
+        "Tel Aviv": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "Tokyo": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "Vienna": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "__NONE__": {
+          "precision": 0.5161290322580645,
+          "recall": 0.9846153846153847,
+          "f1-score": 0.6772486772486772,
+          "support": 65.0
+        },
+        "accuracy": 0.5733333333333334,
+        "macro avg": {
+          "precision": 0.5566308243727599,
+          "recall": 0.31654049654049654,
+          "f1-score": 0.3611287477954145,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.5614336917562724,
+          "recall": 0.5733333333333334,
+          "f1-score": 0.4805008818342152,
+          "support": 150.0
+        }
+      }
+    },
+    "departure_date": {
+      "accuracy": 0.8466666666666667,
+      "label_counts_train": {
+        "__NONE__": 368,
+        "August 12": 29,
+        "sometime next week": 28,
+        "in two weeks": 50,
+        "next month": 31,
+        "September 3": 32,
+        "next Friday": 23,
+        "tomorrow": 37,
+        "around the 20th": 34,
+        "after my exams": 40,
+        "this weekend": 28
+      },
+      "classification_report": {
+        "August 12": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 6.0
+        },
+        "September 3": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "__NONE__": {
+          "precision": 0.7676767676767676,
+          "recall": 1.0,
+          "f1-score": 0.8685714285714285,
+          "support": 76.0
+        },
+        "after my exams": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 11.0
+        },
+        "around the 20th": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 11.0
+        },
+        "in two weeks": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 10.0
+        },
+        "next Friday": {
+          "precision": 1.0,
+          "recall": 0.2857142857142857,
+          "f1-score": 0.4444444444444444,
+          "support": 7.0
+        },
+        "next month": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 9.0
+        },
+        "sometime next week": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "this weekend": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "tomorrow": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "accuracy": 0.8466666666666667,
+        "macro avg": {
+          "precision": 0.7970615243342517,
+          "recall": 0.637085137085137,
+          "f1-score": 0.6815105987298501,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.8022895622895623,
+          "recall": 0.8466666666666667,
+          "f1-score": 0.8025400447047506,
+          "support": 150.0
+        }
+      }
+    },
+    "return_date": {
+      "accuracy": 1.0,
+      "label_counts_train": {
+        "__NONE__": 700
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        }
+      }
+    },
+    "trip_type": {
+      "accuracy": 1.0,
+      "label_counts_train": {
+        "round-trip": 158,
+        "one-way": 136,
+        "__NONE__": 406
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 87.0
+        },
+        "one-way": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 27.0
+        },
+        "round-trip": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 36.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 150.0
+        }
+      }
+    },
+    "passengers": {
+      "accuracy": 0.6466666666666666,
+      "label_counts_train": {
+        "3": 72,
+        "__NONE__": 414,
+        "4": 69,
+        "2": 57,
+        "1": 88
+      },
+      "classification_report": {
+        "1": {
+          "precision": 1.0,
+          "recall": 0.6363636363636364,
+          "f1-score": 0.7777777777777778,
+          "support": 22.0
+        },
+        "2": {
+          "precision": 0.8,
+          "recall": 0.21052631578947367,
+          "f1-score": 0.3333333333333333,
+          "support": 19.0
+        },
+        "3": {
+          "precision": 0.2,
+          "recall": 0.07142857142857142,
+          "f1-score": 0.10526315789473684,
+          "support": 14.0
+        },
+        "4": {
+          "precision": 0.42857142857142855,
+          "recall": 0.15,
+          "f1-score": 0.2222222222222222,
+          "support": 20.0
+        },
+        "__NONE__": {
+          "precision": 0.6302521008403361,
+          "recall": 1.0,
+          "f1-score": 0.7731958762886598,
+          "support": 75.0
+        },
+        "accuracy": 0.6466666666666666,
+        "macro avg": {
+          "precision": 0.6117647058823529,
+          "recall": 0.41366370471633634,
+          "f1-score": 0.442358473503346,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.6389355742296918,
+          "recall": 0.6466666666666666,
+          "f1-score": 0.5823484254737646,
+          "support": 150.0
+        }
+      }
+    },
+    "cabin_class": {
+      "accuracy": 0.8266666666666667,
+      "label_counts_train": {
+        "__NONE__": 583,
+        "economy": 62,
+        "business": 55
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 0.821917808219178,
+          "recall": 1.0,
+          "f1-score": 0.9022556390977443,
+          "support": 120.0
+        },
+        "business": {
+          "precision": 1.0,
+          "recall": 0.13333333333333333,
+          "f1-score": 0.23529411764705882,
+          "support": 15.0
+        },
+        "economy": {
+          "precision": 1.0,
+          "recall": 0.13333333333333333,
+          "f1-score": 0.23529411764705882,
+          "support": 15.0
+        },
+        "accuracy": 0.8266666666666667,
+        "macro avg": {
+          "precision": 0.9406392694063926,
+          "recall": 0.4222222222222222,
+          "f1-score": 0.4576146247972874,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.8575342465753424,
+          "recall": 0.8266666666666667,
+          "f1-score": 0.7688633348076073,
+          "support": 150.0
+        }
+      }
+    },
+    "budget": {
+      "accuracy": 0.8866666666666667,
+      "label_counts_train": {
+        "cheap": 38,
+        "as cheap as possible": 43,
+        "under 300 dollars": 25,
+        "__NONE__": 487,
+        "low budget": 35,
+        "under 500 dollars": 39,
+        "not too expensive": 33
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 0.864,
+          "recall": 1.0,
+          "f1-score": 0.927038626609442,
+          "support": 108.0
+        },
+        "as cheap as possible": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "cheap": {
+          "precision": 1.0,
+          "recall": 0.1,
+          "f1-score": 0.18181818181818182,
+          "support": 10.0
+        },
+        "low budget": {
+          "precision": 1.0,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.8,
+          "support": 6.0
+        },
+        "not too expensive": {
+          "precision": 1.0,
+          "recall": 0.625,
+          "f1-score": 0.7692307692307693,
+          "support": 8.0
+        },
+        "under 300 dollars": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1-score": 0.75,
+          "support": 5.0
+        },
+        "under 500 dollars": {
+          "precision": 1.0,
+          "recall": 0.875,
+          "f1-score": 0.9333333333333333,
+          "support": 8.0
+        },
+        "accuracy": 0.8866666666666667,
+        "macro avg": {
+          "precision": 0.9805714285714285,
+          "recall": 0.6952380952380953,
+          "f1-score": 0.7659172729988181,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.9020800000000001,
+          "recall": 0.8866666666666667,
+          "f1-score": 0.8607257754167625,
+          "support": 150.0
+        }
+      }
+    },
+    "layover_preference": {
+      "accuracy": 0.9333333333333333,
+      "label_counts_train": {
+        "direct": 37,
+        "__NONE__": 537,
+        "short layover only": 40,
+        "layovers are fine": 40,
+        "no layovers": 46
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 0.921875,
+          "recall": 1.0,
+          "f1-score": 0.959349593495935,
+          "support": 118.0
+        },
+        "direct": {
+          "precision": 1.0,
+          "recall": 0.125,
+          "f1-score": 0.2222222222222222,
+          "support": 8.0
+        },
+        "layovers are fine": {
+          "precision": 1.0,
+          "recall": 0.9166666666666666,
+          "f1-score": 0.9565217391304348,
+          "support": 12.0
+        },
+        "no layovers": {
+          "precision": 1.0,
+          "recall": 0.6,
+          "f1-score": 0.75,
+          "support": 5.0
+        },
+        "short layover only": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 7.0
+        },
+        "accuracy": 0.9333333333333333,
+        "macro avg": {
+          "precision": 0.984375,
+          "recall": 0.7283333333333333,
+          "f1-score": 0.7776187109697184,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.9385416666666667,
+          "recall": 0.9333333333333333,
+          "f1-score": 0.9147286045324222,
+          "support": 150.0
+        }
+      }
+    },
+    "time_preference": {
+      "accuracy": 0.7933333333333333,
+      "label_counts_train": {
+        "__NONE__": 538,
+        "late night": 39,
+        "after work": 28,
+        "morning": 23,
+        "evening": 37,
+        "afternoon": 35
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 0.7905405405405406,
+          "recall": 1.0,
+          "f1-score": 0.8830188679245283,
+          "support": 117.0
+        },
+        "after work": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "afternoon": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "evening": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 7.0
+        },
+        "late night": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "morning": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 14.0
+        },
+        "accuracy": 0.7933333333333333,
+        "macro avg": {
+          "precision": 0.29842342342342343,
+          "recall": 0.25,
+          "f1-score": 0.25828092243186584,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.6432882882882883,
+          "recall": 0.7933333333333333,
+          "f1-score": 0.7065324947589099,
+          "support": 150.0
+        }
+      }
+    },
+    "baggage": {
+      "accuracy": 0.9266666666666666,
+      "label_counts_train": {
+        "__NONE__": 636,
+        "checked bag": 21,
+        "carry-on": 19,
+        "two checked bags": 24
+      },
+      "classification_report": {
+        "__NONE__": {
+          "precision": 0.9328859060402684,
+          "recall": 0.9928571428571429,
+          "f1-score": 0.9619377162629758,
+          "support": 140.0
+        },
+        "carry-on": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 4.0
+        },
+        "checked bag": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "two checked bags": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "accuracy": 0.9266666666666666,
+        "macro avg": {
+          "precision": 0.2332214765100671,
+          "recall": 0.24821428571428572,
+          "f1-score": 0.24048442906574394,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.8706935123042505,
+          "recall": 0.9266666666666666,
+          "f1-score": 0.8978085351787775,
+          "support": 150.0
+        }
+      }
+    },
+    "airline_preference": {
+      "accuracy": 0.9533333333333334,
+      "label_counts_train": {
+        "__NONE__": 645,
+        "Lufthansa": 14,
+        "El Al": 12,
+        "Wizz Air": 15,
+        "Ryanair": 14
+      },
+      "classification_report": {
+        "Lufthansa": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "Ryanair": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 4.0
+        },
+        "Wizz Air": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1.0
+        },
+        "__NONE__": {
+          "precision": 0.9530201342281879,
+          "recall": 1.0,
+          "f1-score": 0.9759450171821306,
+          "support": 142.0
+        },
+        "accuracy": 0.9533333333333334,
+        "macro avg": {
+          "precision": 0.48825503355704697,
+          "recall": 0.5,
+          "f1-score": 0.49398625429553267,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.9088590604026846,
+          "recall": 0.9533333333333334,
+          "f1-score": 0.9305612829324169,
+          "support": 150.0
+        }
+      }
+    },
+    "booking_reference": {
+      "accuracy": 0.96,
+      "label_counts_train": {
+        "__NONE__": 583,
+        "AB1234": 34,
+        "ZX9021": 36,
+        "TLV7788": 26,
+        "BK2026": 21
+      },
+      "classification_report": {
+        "AB1234": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 6.0
+        },
+        "BK2026": {
+          "precision": 1.0,
+          "recall": 0.4444444444444444,
+          "f1-score": 0.6153846153846154,
+          "support": 9.0
+        },
+        "TLV7788": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1-score": 0.8571428571428571,
+          "support": 4.0
+        },
+        "ZX9021": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 5.0
+        },
+        "__NONE__": {
+          "precision": 0.9545454545454546,
+          "recall": 1.0,
+          "f1-score": 0.9767441860465116,
+          "support": 126.0
+        },
+        "accuracy": 0.96,
+        "macro avg": {
+          "precision": 0.990909090909091,
+          "recall": 0.8388888888888889,
+          "f1-score": 0.8898543317147969,
+          "support": 150.0
+        },
+        "weighted avg": {
+          "precision": 0.9618181818181819,
+          "recall": 0.96,
+          "f1-score": 0.9535786693926229,
+          "support": 150.0
+        }
+      }
+    }
+  }
+}
