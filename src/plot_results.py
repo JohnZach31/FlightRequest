@@ -18,24 +18,60 @@ def load_json(path):
         return json.load(file)
 
 
-def plot_model_comparison(rows):
-    # compare only full-schema methods here
-    full_schema_rows = [
+def clean_method_name(method):
+    names = {
+        "rule_based_baseline": "Rule baseline",
+        "tfidf_logistic_regression": "TF-IDF intent",
+        "fine_tuned_distilbert": "Fine-tuned DistilBERT",
+        "one_classifier_per_slot": "Slot classifiers",
+        "tfidf_intent_plus_slot_classifiers": "TF-IDF full pipeline",
+        "manual_off_the_shelf_llm": "Manual LLM sample",
+    }
+
+    return names.get(method, method)
+
+
+def plot_intent_accuracy(rows):
+    intent_rows = [
         row for row in rows
-        if row["task"] == "full_schema_extraction"
+        if row["intent_accuracy"] != ""
     ]
 
-    methods = [row["method"] for row in full_schema_rows]
-    full_scores = [row["full_example_accuracy"] for row in full_schema_rows]
-    slot_scores = [row["slot_accuracy"] for row in full_schema_rows]
-    missing_scores = [row["missing_fields_accuracy"] for row in full_schema_rows]
+    methods = [clean_method_name(row["method"]) for row in intent_rows]
+    scores = [row["intent_accuracy"] for row in intent_rows]
 
     x = range(len(methods))
 
-    plt.figure(figsize=(9, 5))
-    plt.bar(x, full_scores)
-    plt.xticks(x, methods, rotation=20, ha="right")
-    plt.ylim(0, 1)
+    plt.figure(figsize=(10, 5))
+    plt.bar(x, scores)
+    plt.xticks(x, methods, rotation=25, ha="right")
+    plt.ylim(0, 1.05)
+    plt.ylabel("Accuracy")
+    plt.title("Intent Accuracy by Method")
+    plt.tight_layout()
+
+    output_path = VISUALS_DIR / "intent_accuracy_by_method.png"
+    plt.savefig(output_path)
+    plt.close()
+
+    print(f"Saved {output_path}")
+
+
+def plot_full_schema_accuracy(rows):
+    full_schema_rows = [
+        row for row in rows
+        if row["full_example_accuracy"] != ""
+    ]
+
+    methods = [clean_method_name(row["method"]) for row in full_schema_rows]
+    scores = [row["full_example_accuracy"] for row in full_schema_rows]
+
+    x = range(len(methods))
+
+    plt.figure(figsize=(10, 5))
+    plt.bar(x, scores)
+    plt.xticks(x, methods, rotation=25, ha="right")
+    plt.ylim(0, 1.05)
     plt.ylabel("Accuracy")
     plt.title("Full Example Accuracy by Method")
     plt.tight_layout()
@@ -46,11 +82,21 @@ def plot_model_comparison(rows):
 
     print(f"Saved {output_path}")
 
-    # second graph for slot/missing field comparison
-    plt.figure(figsize=(9, 5))
+
+def plot_slot_missing_accuracy(rows):
+    full_schema_rows = [
+        row for row in rows
+        if row["slot_accuracy"] != "" and row["missing_fields_accuracy"] != ""
+    ]
+
+    methods = [clean_method_name(row["method"]) for row in full_schema_rows]
+    slot_scores = [row["slot_accuracy"] for row in full_schema_rows]
+    missing_scores = [row["missing_fields_accuracy"] for row in full_schema_rows]
 
     width = 0.35
     x_positions = list(range(len(methods)))
+
+    plt.figure(figsize=(10, 5))
 
     plt.bar(
         [x - width / 2 for x in x_positions],
@@ -66,8 +112,8 @@ def plot_model_comparison(rows):
         label="Missing fields accuracy"
     )
 
-    plt.xticks(x_positions, methods, rotation=20, ha="right")
-    plt.ylim(0, 1)
+    plt.xticks(x_positions, methods, rotation=25, ha="right")
+    plt.ylim(0, 1.05)
     plt.ylabel("Accuracy")
     plt.title("Slot and Missing-Field Accuracy")
     plt.legend()
@@ -80,7 +126,7 @@ def plot_model_comparison(rows):
     print(f"Saved {output_path}")
 
 
-def plot_intent_distribution(eda):
+def plot_dataset_intent_distribution(eda):
     intent_distribution = eda["intent_distribution"]
 
     labels = list(intent_distribution.keys())
@@ -106,11 +152,13 @@ def main():
     comparison_rows = load_json(COMPARISON_PATH)
     eda = load_json(EDA_PATH)
 
-    plot_model_comparison(comparison_rows)
-    plot_intent_distribution(eda)
+    plot_intent_accuracy(comparison_rows)
+    plot_full_schema_accuracy(comparison_rows)
+    plot_slot_missing_accuracy(comparison_rows)
+    plot_dataset_intent_distribution(eda)
 
     print()
-    print("Done creating result graphs.")
+    print("Done creating updated result graphs.")
 
 
 if __name__ == "__main__":
